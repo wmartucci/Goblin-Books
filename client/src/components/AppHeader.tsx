@@ -25,7 +25,11 @@ function AppHeader() {
                     <h1 className="text-logo"> Goblin Books</h1>
                 </Link>
                 <form action="">
-                    <input type="text" className="search-bar" placeholder="Search..." />
+                    <input
+                        type="text"
+                        className="search-bar"
+                        placeholder="Search..."
+                    />
                     <button type="submit" className="button search-button">
                         <IoIosSearch />
                     </button>
@@ -35,7 +39,7 @@ function AppHeader() {
                 <button className="button">
                     <PiShoppingCartSimpleFill />0
                 </button>
-                <button className="button">login</button>
+                <button className="button">Log In</button>
                 <HeaderDropdown categories={categoryList} />
             </section>
         </header>

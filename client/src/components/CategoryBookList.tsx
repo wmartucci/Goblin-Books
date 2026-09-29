@@ -3,24 +3,22 @@ import "../assets/css/CategoryBookList.css";
 import CategoryBookListItem from "./CategoryBookListItem";
 import CategoryNav from "./CategoryNav";
 import "../types";
-import { bookList } from "../types";
+import { bookList, categoryList } from "../types";
 
 function CategoryBookList() {
     return (
         <>
-            <CategoryNav />
+            <CategoryNav categories={categoryList}/>
             <ul className="book-lists">
-                {/*
-                  // You need to add a code to display all the books here
-                   The following code only displays the first book
-              */}
-                <CategoryBookListItem
-                    bookId={bookList[0].bookId}
-                    isPublic={bookList[0].isPublic}
-                    price={bookList[0].price}
-                    title={bookList[0].title}
-                    author={bookList[0].author}
-                />
+                {bookList.map((book) => (
+                    <CategoryBookListItem
+                        bookId={book.bookId}
+                        isPublic={book.isPublic}
+                        price={book.price}
+                        title={book.title}
+                        author={book.author}
+                    />
+                ))}
             </ul>
         </>
     );

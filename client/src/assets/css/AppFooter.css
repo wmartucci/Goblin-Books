@@ -16,3 +16,7 @@ footer {
     gap: 0.25em;
 }
 
+.social-media-icons > .button {
+    width: 5em;
+}
+

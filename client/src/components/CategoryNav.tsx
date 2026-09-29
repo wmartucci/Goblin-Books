@@ -1,19 +1,24 @@
+import { Link } from "react-router-dom";
 import "../assets/css/CategoryNav.css";
 import "../assets/css/global.css";
+import type { CategoryItem } from "../types";
 
-function CategoryNav() {
+type CategoryNavProps = {
+    categories: CategoryItem[];
+};
+
+function CategoryNav({ categories }: CategoryNavProps) {
     return (
         <nav className="category-nav">
             <ul className="category-buttons">
-                {/*
-           This component displays the category navigation bar on the categories page.
-           Please, take a look at the difference between the screenshots of anotherbookstore categories
-           page and the one you will get if you run this code.
-
-          <li className="button unselected-category-button">
-
-          </li>
-   */}
+                {categories.map((category) => (
+                    <li
+                        className={`button ${category.categoryId == 1002 ? "" : "un"}selected-category-button`}
+                        key={category.categoryId}
+                    >
+                        <Link to="/categories">{category.name}</Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

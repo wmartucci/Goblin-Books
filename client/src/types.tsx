@@ -1,7 +1,5 @@
-// Contains all the custom types we want to use for our application
-import Classics from "./assets/images/categories/classics.jpg";
 import Fantasy from "./assets/images/categories/fantasy.jpg";
-import Mystery from "./assets/images/categories/mystery.jpg";
+import Finance from "./assets/images/categories/finance.jpg";
 import Romance from "./assets/images/categories/romance.jpg";
 
 export interface BookItem {
@@ -17,12 +15,12 @@ export interface CategoryItem {
     name: string;
 }
 
-export const categoryImages: Record<string, any> = {
-    classics: Classics,
-    fantasy: Fantasy,
-    mystery: Mystery,
-    romance: Romance,
-};
+export const featuredCategories = [
+    { id: 0, name: "Fantasy", imgName: Fantasy },
+    { id: 1, name: "Finance", imgName: Finance },
+    { id: 2, name: "Romance", imgName: Romance },
+];
+
 export const categoryList = [
     { categoryId: 1001, name: "Fantasy" },
     { categoryId: 1002, name: "Finance" },
@@ -33,30 +31,44 @@ export const categoryList = [
 export const bookList = [
     {
         bookId: 1001,
-        title: "The Iliad",
-        author: "Homer",
-        price: 699,
-        isPublic: true,
-    },
-    {
-        bookId: 1002,
-        title: "The Brothers Karamazov",
-        author: "Fyodor Dostoevsky",
-        price: 1399,
+        title: "The Alchemy of Finance",
+        author: "George Soros",
+        price: 13,
         isPublic: false,
     },
     {
-        bookId: 1003,
-        title: "Little Dorrit",
-        author: "Charles Dickens",
-        price: 599,
+        bookId: 1002,
+        title: "Finance",
+        author: "Angelico Groppelli, Ehsan Nikbakht",
+        price: 53,
         isPublic: true,
     },
     {
+        bookId: 1003,
+        title: "Obedience in Finances",
+        author: "Kenneth E Hagin",
+        price: 29,
+        isPublic: false,
+    },
+    {
         bookId: 1004,
-        title: "Moby Dick",
-        author: "Herman Melville",
-        price: 699,
+        title: "Personal Finance",
+        author: "E. Thomas Garman",
+        price: 37,
         isPublic: true,
+    },
+    {
+        bookId: 1005,
+        title: "Finance Basics",
+        author: "Harvard Business Review",
+        price: 19,
+        isPublic: false,
+    },
+    {
+        bookId: 1006,
+        title: "Public Finance",
+        author: "Harvey S. Rosen",
+        price: 73,
+        isPublic: false,
     },
 ];

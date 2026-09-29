@@ -1,22 +1,22 @@
 import "../assets/css/AppFooter.css";
 import "../assets/css/global.css";
 import { Link } from "react-router-dom";
-import facebookLogo from "../assets/images/social-media/facebook-logo.png"
-import twitterLogo from "../assets/images/social-media/twitter-logo.png"
+import facebookLogo from "../assets/images/social-media/facebook-logo.png";
+import twitterLogo from "../assets/images/social-media/twitter-logo.png";
 
 function AppFooter() {
     return (
         <footer className="container">
             <section className="links">
-                <Link to="/">contact</Link>
-                <Link to="/">directions</Link>
+                <Link to="/">Contact</Link>
+                <Link to="/">Directions</Link>
             </section>
             <section className="social-media-icons">
                 <Link to="/" className="button">
-                    <img src={facebookLogo}/>
+                    <img src={facebookLogo} />
                 </Link>
                 <Link to="/" className="button">
-                    <img src={twitterLogo}/>
+                    <img src={twitterLogo} />
                 </Link>
             </section>
         </footer>

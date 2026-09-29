@@ -1,30 +1,26 @@
+import { Link } from "react-router-dom";
 import "../assets/css/HomeCategoryList.css";
-import { categoryImages } from "../types";
-
-/*const categoryImageFileName = (category) => {
-  let name = category.name.toLowerCase();
-  name = name.replace(/ /g, "-");
-  name = name.replace(/'/g, "");
-  return `${name}.jpg`;
-};*/
+import { featuredCategories } from "../types";
 
 function HomeCategoryList() {
     return (
-        <ul className="home-list">
-            {/*  This displays a single category image on the home page.
-                You have to modify it in such a way that it should
-                display all your bookstore categories with proper images
-                and descriptions as shown on the sample screenshots of
-                "Anotherbookstore" on the project specification
-         */}
-            <li className="home-list-li">
-                <img src={categoryImages["classics"]} alt="book.title" />
-                <div className="home-list-div">
-                    {" "}
-                    {"You Should display the category name here"}{" "}
-                </div>
-            </li>
-        </ul>
+        <>
+            <h2>Featured Categories</h2>
+
+            <ul className="home-list">
+                {featuredCategories.map((category) => (
+                    <li key={category.id} className="home-list-li">
+                        <Link to="/categories">
+                            <div className="home-list-div">{category.name}</div>
+                            <img
+                                src={category.imgName}
+                                alt={`${category.name} category`}
+                            />
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 }
 export default HomeCategoryList;
