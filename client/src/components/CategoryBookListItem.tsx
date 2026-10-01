@@ -12,7 +12,7 @@ const bookImageFileName = (book: BookItem) => {
 
 function CategoryBookListItem(props: BookItem) {
     return (
-        <li key={props.bookId} className="book-box">
+        <li className="book-box">
             <div className="book-image">
                 <img
                     src={`../assets/images/books/${bookImageFileName(props)}`}

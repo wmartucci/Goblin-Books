@@ -11,6 +11,9 @@ function AppFooter() {
                 <Link to="/">Contact</Link>
                 <Link to="/">Directions</Link>
             </section>
+            <section className="copyright">
+                <p>© {new Date().getFullYear()} Goblin Books</p>
+            </section>
             <section className="social-media-icons">
                 <Link to="/" className="button">
                     <img src={facebookLogo} />

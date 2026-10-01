@@ -1,20 +1,78 @@
-
 header {
     background: var(--secondary-background-color);
     display: flex;
     flex-direction: row;
-    padding: 1em;
+    align-items: center;
     gap: 1em;
+}
+
+/* Logo and title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .text-logo {
     font-family: var(--title-font-family);
 }
 
+/* Search bar */
 .search-bar {
-    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
 }
 
+.search-field {
+    padding: 0.5em 2em 0.5em 0.5em;
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+.search-button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.25em;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    padding-right: 10px;
+}
+
+/* Login and cart */
+
+.login-button {
+    margin-left: auto;
+}
+
+.cart-button {
+    position: relative;
+    background: transparent;
+    border: 0;
+}
+
+.cart-button:hover {
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 4em;
+}
+
+.cart-count {
+    position: absolute;
+    top: 45%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    line-height: 1;
+    color: var(--white-text-color);
+}
+
+/* Changes the header to a column when its width is ≤ 600px */
 @media (max-width: 600px) {
     header {
         flex-direction: column;

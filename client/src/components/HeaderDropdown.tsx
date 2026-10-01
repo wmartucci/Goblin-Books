@@ -12,7 +12,7 @@ function HeaderDropdown({ categories }: HeaderDropdownProps) {
     return (
         <div className="header-dropdown">
             <button className="button categories-button">
-                Categories
+                <p>Categories</p>
                 <IoMdArrowDropdown />
             </button>
             <ul>

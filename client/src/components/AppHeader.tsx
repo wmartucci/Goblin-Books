@@ -10,38 +10,37 @@ import { IoIosSearch } from "react-icons/io";
 function AppHeader() {
     return (
         <header className="container">
-            <section className="bookstore-logo">
-                <Link to="/">
-                    <img
-                        src={logo}
-                        alt="Goblin Books Logo"
-                        width="150px"
-                        height="auto"
-                    />
-                </Link>
-            </section>
-            <section className="title-and-search-bar">
-                <Link to="/">
-                    <h1 className="text-logo"> Goblin Books</h1>
-                </Link>
-                <form action="">
-                    <input
-                        type="text"
-                        className="search-bar"
-                        placeholder="Search..."
-                    />
-                    <button type="submit" className="button search-button">
-                        <IoIosSearch />
-                    </button>
-                </form>
-            </section>
-            <section className="header-dropdown-and-cart">
-                <button className="button">
-                    <PiShoppingCartSimpleFill />0
+            <Link to="/" className="logo-title clean-link">
+                <img
+                    src={logo}
+                    alt="Goblin Books Logo"
+                    width="140px"
+                    height="auto"
+                />
+
+                <h1 className="text-logo">
+                    Goblin <br /> Books
+                </h1>
+            </Link>
+            <form action="" className="search-bar">
+                <input
+                    type="text"
+                    className="search-field"
+                    placeholder="Search..."
+                />
+                <button type="submit" className="search-button">
+                    <IoIosSearch />
                 </button>
-                <button className="button">Log In</button>
-                <HeaderDropdown categories={categoryList} />
-            </section>
+            </form>
+
+            <HeaderDropdown categories={categoryList} />
+
+            <button className="button login-button">Log In</button>
+
+            <button className="cart-button">
+                <PiShoppingCartSimpleFill className="cart-icon" />
+                <p className="cart-count">3</p>
+            </button>
         </header>
     );
 }
