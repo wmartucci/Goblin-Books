@@ -1,22 +1,26 @@
-
 footer {
     background: var(--secondary-background-color);
     display: flex;
-    gap: 1em;
+    align-items: center;
 }
 
 .links,
 .social-media-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
-.social-media-icons {
-    text-align: center;
-    gap: 0.25em;
+.links > a {
+    color: var(--default-text-color);
 }
 
-.social-media-icons > .button {
-    width: 5em;
+.social-media-icons > a {
+    width: 3rem;
 }
 
+.copyright {
+    font-size: var(--small-font-size);
+    margin-left: auto;
+    margin-right: auto;
+}

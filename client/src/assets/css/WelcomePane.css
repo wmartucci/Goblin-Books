@@ -1,0 +1,14 @@
+.welcome-text {
+    background-color: var(--background-color-dark);
+    color: var(--white-text-color);
+}
+
+.shop-now-button {
+    color: var(--default-text-color);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.flow-content > * + * {
+    margin-top: 2rem;
+}

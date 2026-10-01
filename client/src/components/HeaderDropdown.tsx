@@ -11,7 +11,7 @@ type HeaderDropdownProps = {
 function HeaderDropdown({ categories }: HeaderDropdownProps) {
     return (
         <div className="header-dropdown">
-            <button className="button categories-button">
+            <button className="button categories-button rounded-border">
                 <p>Categories</p>
                 <IoMdArrowDropdown />
             </button>

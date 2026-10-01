@@ -15,10 +15,10 @@ function AppFooter() {
                 <p>© {new Date().getFullYear()} Goblin Books</p>
             </section>
             <section className="social-media-icons">
-                <Link to="/" className="button">
+                <Link to="/">
                     <img src={facebookLogo} />
                 </Link>
-                <Link to="/" className="button">
+                <Link to="/">
                     <img src={twitterLogo} />
                 </Link>
             </section>

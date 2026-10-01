@@ -25,7 +25,7 @@ function AppHeader() {
             <form action="" className="search-bar">
                 <input
                     type="text"
-                    className="search-field"
+                    className="search-field rounded-border"
                     placeholder="Search..."
                 />
                 <button type="submit" className="search-button">

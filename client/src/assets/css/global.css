@@ -13,12 +13,13 @@
     --default-font-family: "Lora", serif;
     /*
       16px is the default font size set by browsers in the html tag.
-      This should never be changed so that vision-impared users can override it.
+      This should never be changed so that vision-impaired users can override it.
       Therefore, 1rem (root em) is the width of an em-dash at 16px.
-      If you want a differnt default size for your site, change it in the body tag.
+      If you want a different default size for your site, change it in the body tag.
       For example, if you want 20px, then set the size to 20/16 = 1.25rem.
     */
     --default-font-size: 1.25rem;
+    --small-font-size: 0.9rem;
     --default-text-color: #111;
     --white-text-color: whitesmoke;
     --neutral-color: #4e4e4e;
@@ -27,16 +28,17 @@
     --primary-color-dark: #fab73d;
     --primary-background-color: #f5eee2;
     --secondary-background-color: #d1edb9;
+    --background-color-dark: #204c39;
     --card-background-color: navajowhite;
 
-    --border-radius: 0.3em;
+    --border-radius: 0.3rem;
 }
 
 /* RESET */
 
 /*
-  In CSS, margins can be a pain to work with. One of the reasons for this
-  is that top and bottom margins collapse into one another. For example,
+  In CSS, margins can be a pain to work with because the top and 
+  bottom margins collapse into one another. For example,
   if you have one paragraph following another and they both have top
   and bottom margins of 1em, the space between them will be... 1em.
   It will not be 2em as you might think. To get around this odd behavior,
@@ -112,6 +114,12 @@ textarea {
     margin: 0;
 }
 
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 /* UTILITY CLASSES */
 
 /*
@@ -135,14 +143,8 @@ textarea {
     padding: 1rem;
 }
 
-/*
-  Sometimes it's nice to have a section where the foreground
-  and background colors are (more-or-less) flipped for contrast.
-  This utility class does that.
-*/
-.dark-background {
-    background-color: var(--neutral-color);
-    color: whitesmoke;
+.rounded-border {
+    border-radius: var(--border-radius);
 }
 
 /* BODY */
@@ -174,7 +176,7 @@ body {
     display: inline-block;
     background: var(--primary-color);
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     border: 0;
     border-radius: var(--border-radius);
