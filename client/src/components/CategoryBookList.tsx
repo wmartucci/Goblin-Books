@@ -9,7 +9,7 @@ function CategoryBookList() {
     return (
         <>
             <CategoryNav categories={categoryList} />
-            <ul className="book-lists">
+            <ul className="book-list">
                 {bookList.map((book) => (
                     <CategoryBookListItem
                         key={book.bookId}

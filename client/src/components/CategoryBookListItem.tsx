@@ -12,18 +12,24 @@ const bookImageFileName = (book: BookItem) => {
 
 function CategoryBookListItem(props: BookItem) {
     return (
-        <li className="book-box">
+        <li className="book-box container">
             <div className="book-image">
                 <img
                     src={`../assets/images/books/${bookImageFileName(props)}`}
                     alt={props.title}
                 />
             </div>
-            <div className="book-title">{props.title}</div>
-            <div className="book-author">{props.author}</div>
-            <div className="book-price">${props.price}</div>
-            <button className="button">Add to Cart</button>
-            <button className="button">Read Now</button>
+            <div className="book-info-and-actions">
+                <section className="book-info">
+                    <div className="book-title">{props.title}</div>
+                    <div className="book-author">{props.author}</div>
+                    <div className="book-price">${props.price}</div>
+                </section>
+                <button className="button add-to-cart-button">
+                    Add to Cart
+                </button>
+                {/* <button className="button">Read Now</button> */}
+            </div>
         </li>
     );
 }

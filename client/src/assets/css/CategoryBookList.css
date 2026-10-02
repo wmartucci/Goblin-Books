@@ -1,7 +1,6 @@
-
-.book-lists {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1em;
-    gap: 1em;
+.book-list {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
 }
