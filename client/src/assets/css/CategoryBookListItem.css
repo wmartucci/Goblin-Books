@@ -12,8 +12,14 @@
     justify-content: space-between;
 }
 
+.book-image {
+    position: relative;
+}
+
 .book-image > img {
     height: 100%;
+    min-width: 11rem;
+    max-width: 11rem;
 }
 
 .book-title {
@@ -31,4 +37,14 @@
 
 .add-to-cart-button {
     align-self: flex-start;
+}
+
+.read-now-button {
+    border-radius: 9999999px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    z-index: 1;
+    box-shadow: 0 0.15rem 0.35rem rgb(0 0 0 / 50%);
 }

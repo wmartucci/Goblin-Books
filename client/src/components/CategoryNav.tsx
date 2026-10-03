@@ -10,13 +10,13 @@ type CategoryNavProps = {
 function CategoryNav({ categories }: CategoryNavProps) {
     return (
         <nav className="category-nav">
-            <ul className="category-buttons">
+            <ul className="category-buttons container">
                 {categories.map((category) => (
                     <li
                         className={`button ${category.categoryId == 1002 ? "" : "un"}selected-category-button`}
                         key={category.categoryId}
                     >
-                        <Link to="/categories">{category.name}</Link>
+                        <Link to="/categories" className="clean-link">{category.name}</Link>
                     </li>
                 ))}
             </ul>

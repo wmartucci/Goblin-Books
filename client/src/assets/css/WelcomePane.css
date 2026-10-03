@@ -1,4 +1,6 @@
 .welcome-text {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color-dark);
     color: var(--white-text-color);
 }
@@ -7,6 +9,7 @@
     color: var(--default-text-color);
     font-weight: bold;
     font-size: 4rem;
+    align-self: center;
 }
 
 .flow-content > * + * {

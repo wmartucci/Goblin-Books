@@ -19,8 +19,7 @@ h2 {
 .category-cards-li {
     text-align: left;
     cursor: pointer;
-    border: 4px solid transparent;
-    border-color: var(--white-text-color);
+    border: 3px solid transparent;
     border-radius: var(--border-radius);
     background-color: var(--white-text-color);
 }
@@ -37,5 +36,5 @@ h2 {
 
 .category-img {
     aspect-ratio: 0.75;
-    width: 14rem;
+    width: 12rem;
 }

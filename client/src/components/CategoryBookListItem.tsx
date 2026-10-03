@@ -18,6 +18,10 @@ function CategoryBookListItem(props: BookItem) {
                     src={`../assets/images/books/${bookImageFileName(props)}`}
                     alt={props.title}
                 />
+                {/* Hard code which books have "Read Now" for now */}
+                {(props.bookId === 1002 || props.bookId === 1004) && (
+                    <button className="button read-now-button">Read Now!</button>
+                )}
             </div>
             <div className="book-info-and-actions">
                 <section className="book-info">
@@ -28,7 +32,6 @@ function CategoryBookListItem(props: BookItem) {
                 <button className="button add-to-cart-button">
                     Add to Cart
                 </button>
-                {/* <button className="button">Read Now</button> */}
             </div>
         </li>
     );
