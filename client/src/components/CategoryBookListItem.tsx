@@ -15,12 +15,14 @@ function CategoryBookListItem(props: BookItem) {
         <li className="book-box container">
             <div className="book-image">
                 <img
-                    src={`../assets/images/books/${bookImageFileName(props)}`}
+                    src={`${import.meta.env.BASE_URL}assets/images/books/${bookImageFileName(props)}`}
                     alt={props.title}
                 />
                 {/* Hard code which books have "Read Now" for now */}
                 {(props.bookId === 1002 || props.bookId === 1004) && (
-                    <button className="button read-now-button">Read Now!</button>
+                    <button className="button read-now-button">
+                        Read Now!
+                    </button>
                 )}
             </div>
             <div className="book-info-and-actions">
