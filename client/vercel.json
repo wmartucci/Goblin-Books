@@ -1,8 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/WillBookstoreReact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/WillBookstoreReact/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/WillBookstoreReact/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

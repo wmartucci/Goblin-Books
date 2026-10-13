@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/WillBookstoreReact">
             {/* app-shell and app-main are wrappers that allow the app to take up the entire vertical screen space */}
             <div className="app-shell">
                 <AppHeader />
