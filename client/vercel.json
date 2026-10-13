@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/WillBookstoreReact/",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/WillBookstoreReact",
