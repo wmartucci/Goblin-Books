@@ -1,21 +1,24 @@
 .cart-table {
     display: grid;
-    grid-template-columns: max-content minmax(10rem, 20rem) repeat(3, max-content);
+    grid-template-columns: max-content minmax(10rem, 20rem) repeat(
+            3,
+            max-content
+        );
     grid-row-gap: 0.5rem;
     grid-column-gap: 1rem;
     background-color: var(--card-background-color);
     border-radius: var(--border-radius);
+    height: fit-content;
 }
 
 .cart-table > li {
     display: contents;
 }
 
-.cart-table > li:nth-child(n + 3) > * {
-    margin-top: 1.5rem;
-}
-
-.header-quantity, .header-subtotal, .cart-book-quantity, .cart-book-subtotal {
+.header-quantity,
+.header-subtotal,
+.cart-book-quantity,
+.cart-book-subtotal {
     margin-left: 2rem;
 }
 
@@ -49,7 +52,7 @@
 }
 
 .cart-book-image > img {
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 

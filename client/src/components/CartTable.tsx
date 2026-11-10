@@ -6,9 +6,6 @@ import {CartContext} from "../contexts/CartContext.tsx";
 import {asDollarsAndCents, bookImageFileName} from "../cartUtils.tsx";
 import type {ShoppingCartItem} from "../types.tsx";
 
-// TODO: add empty cart display
-// TODO: add clear cart button
-
 function CartTable() {
     const {cartItems, dispatch} = useContext(CartContext);
     const quantityButtonSize = "0.85em";
@@ -53,7 +50,7 @@ function CartTable() {
                 </li>
             ))}
         </ul>
-    )
+    );
 }
 
 export default CartTable;
