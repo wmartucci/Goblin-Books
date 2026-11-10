@@ -1,0 +1,26 @@
+footer {
+    background: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+}
+
+.links,
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.links > a {
+    color: var(--default-text-color);
+}
+
+.social-media-icons > a {
+    width: 3rem;
+}
+
+.copyright {
+    font-size: var(--small-font-size);
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -10,7 +10,7 @@ function CartTable() {
     const {cartItems, dispatch} = useContext(CartContext);
 
     return (
-        <ul className="cart-table container">
+        <ul className="cart-table">
             <li className="cart-table-header">
                 <div className="header-book">Book</div>
                 <div className="header-price">Price</div>
@@ -19,13 +19,11 @@ function CartTable() {
             </li>
             {cartItems.map((item: ShoppingCartItem) => (
                 <li key={item.id}>
-                    <div className="cart-book-info">
-                        <div className="cart-book-image"><img
-                            src={`${import.meta.env.BASE_URL}/assets/images/books/${bookImageFileName(item.book)}`}
-                            alt={item.book.title}/>
-                        </div>
-                        <div className="cart-book-title">{item.book.title}</div>
+                    <div className="cart-book-image">
+                        <img src={`${import.meta.env.BASE_URL}/assets/images/books/${bookImageFileName(item.book)}`}
+                             alt={item.book.title}/>
                     </div>
+                    <div className="cart-book-title">{item.book.title}</div>
 
                     <div className="cart-book-price">{asDollarsAndCents(item.book.price)}</div>
 

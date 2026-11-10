@@ -1,0 +1,75 @@
+header {
+    background: var(--secondary-background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo and title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-logo {
+    font-family: var(--title-font-family);
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.search-field {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: 0;
+}
+
+.search-button {
+    font-size: var(--default-font-size);
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 0;
+    top: 55%;
+}
+
+/* Login and cart */
+
+.login-button {
+    margin-left: auto;
+    text-wrap: nowrap;
+}
+
+.cart-button {
+    position: relative;
+}
+
+.cart-button:hover {
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: calc(var(--default-font-size) * 3.2);
+}
+
+.cart-count {
+    position: absolute;
+    top: 44%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: calc(var(--default-font-size) * 1.25);
+    line-height: 1;
+    color: var(--white-text-color);
+}
+
+/* Changes the header to a column when its width is ≤ 600px */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+}

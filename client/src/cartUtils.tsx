@@ -4,8 +4,11 @@ export function cartItemCount(cart: ShoppingCartItem[]): number {
     return cart.reduce((total: number, current: ShoppingCartItem): number => total + current.quantity, 0);
 }
 
-export function cartSubtotal(cart: ShoppingCartItem[]): number {
-    return cart.reduce((total: number, current: ShoppingCartItem): number => total + current.quantity * current.book.price, 0);
+export function cartSubtotal(cart: ShoppingCartItem[]): string {
+    return asDollarsAndCents(
+        cart.reduce((total: number, current: ShoppingCartItem): number =>
+            total + current.quantity * current.book.price, 0)
+    );
 }
 
 export function itemCountLabel(cart: ShoppingCartItem[]): string {

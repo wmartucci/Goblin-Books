@@ -1,0 +1,26 @@
+.category-buttons {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--background-color-dark);
+}
+
+.button.selected-category-button {
+    background-color: var(--white-text-color);
+}
+
+.button {
+    border: 1px solid transparent;
+}
+
+.button.unselected-category-button,
+.button.unselected-category-button:visited {
+    background-color: transparent;
+    color: var(--white-text-color);
+}
+
+.button.unselected-category-button:hover,
+.button.unselected-category-button:active {
+    border-color: var(--white-text-color);
+}
