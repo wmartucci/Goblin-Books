@@ -1,16 +1,20 @@
 import "../assets/css/CartTable.css"
-import {CiCirclePlus} from "react-icons/ci";
-import {CiCircleMinus} from "react-icons/ci";
+import {FaMinus, FaPlus} from "react-icons/fa";
+import {FaRegTrashCan} from "react-icons/fa6";
 import {useContext} from "react";
 import {CartContext} from "../contexts/CartContext.tsx";
 import {asDollarsAndCents, bookImageFileName} from "../cartUtils.tsx";
 import type {ShoppingCartItem} from "../types.tsx";
 
+// TODO: add empty cart display
+// TODO: add clear cart button
+
 function CartTable() {
     const {cartItems, dispatch} = useContext(CartContext);
+    const quantityButtonSize = "0.85em";
 
     return (
-        <ul className="cart-table">
+        <ul className="cart-table container">
             <li className="cart-table-header">
                 <div className="header-book">Book</div>
                 <div className="header-price">Price</div>
@@ -28,14 +32,20 @@ function CartTable() {
                     <div className="cart-book-price">{asDollarsAndCents(item.book.price)}</div>
 
                     <div className="cart-book-quantity">
-                        <button onClick={() => dispatch({type: "REMOVE", payload: item.book})}
-                                className="icon-button dec-button">
-                            <i className="minus-icon"> <CiCircleMinus/> </i>
-                        </button>
-                        <span className="quantity">{item.quantity}</span>&nbsp;
-                        <button onClick={() => dispatch({type: "ADD", payload: item.book})}
-                                className="icon-button inc-button">
-                            <i className="plus-icon"> <CiCirclePlus/></i>
+                        <div className="inc-and-dec">
+                            <button onClick={() => dispatch({type: "REMOVE", payload: item.book})}
+                                    className="icon-button dec-button">
+                                <FaMinus size={quantityButtonSize}/>
+                            </button>
+                            <span className="quantity">{item.quantity}</span>
+                            <button onClick={() => dispatch({type: "ADD", payload: item.book})}
+                                    className="icon-button inc-button">
+                                <FaPlus size={quantityButtonSize}/>
+                            </button>
+                        </div>
+                        <button onClick={() => dispatch({type: "REMOVE ALL COPIES", payload: item.book})}
+                                className="clear-book-button">
+                            <FaRegTrashCan size={quantityButtonSize}/>
                         </button>
                     </div>
 

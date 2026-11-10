@@ -1,3 +1,38 @@
 .cart {
     display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.subtotal-area {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-color-dark);
+    border-radius: var(--border-radius);
+    height: fit-content;
+}
+
+.subtotal-header {
+    margin-bottom: 1em;
+}
+
+.subtotal {
+    font-weight: bolder;
+    color: var(--white-text-color);
+    margin-bottom: 0.5em;
+}
+
+.checkout-button {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+    align-self: center;
+}
+
+.continue-shopping-button {
+    background: var(--white-text-color);
+    border-radius: 999px;
+    padding: 0.5em 1em;
+    width: fit-content;
+    align-self: center;
 }
