@@ -4,7 +4,7 @@
             3,
             max-content
         );
-    grid-row-gap: 0.75rem;
+    grid-row-gap: 1rem;
     grid-column-gap: 1rem;
     background-color: var(--card-background-color);
     border-radius: var(--border-radius);
@@ -69,6 +69,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.clear-book-button {
+    width: fit-content;
+    align-self: center;
 }
 
 .cart-book-subtotal {

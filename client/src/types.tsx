@@ -23,4 +23,3 @@ export class ShoppingCartItem {
         this.quantity = 1;
     }
 }
-export const initialCartState: ShoppingCartItem[] = [];

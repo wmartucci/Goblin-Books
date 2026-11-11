@@ -1,10 +1,10 @@
 import {CartContext} from "../contexts/CartContext.tsx";
 import React, {useReducer} from "react";
-import {cartReducer} from "../reducers/CartReducer.tsx";
-import {initialCartState} from "../types.tsx";
+import {cartKey, cartReducer, initialCart} from "../reducers/CartReducer.tsx";
 
 function CartProvider({children}: { children: React.ReactNode }) {
-    const [cartItems, dispatch] = useReducer(cartReducer, initialCartState);
+    const [cartItems, dispatch] = useReducer(cartReducer, initialCart);
+    localStorage.setItem(cartKey, JSON.stringify(cartItems));
     return (
         <CartContext.Provider value={{
             cartItems: cartItems,

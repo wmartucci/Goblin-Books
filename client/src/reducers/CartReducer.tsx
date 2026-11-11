@@ -1,5 +1,9 @@
 import {ShoppingCartItem, type BookItem} from "../types.tsx";
 
+export const cartKey = "CartKey";
+const initialCartJSON: string | null = localStorage.getItem(cartKey);
+export const initialCart: ShoppingCartItem[] = initialCartJSON ? JSON.parse(initialCartJSON) : [];
+
 export type CartTypes =
     | { type: "ADD"; payload: BookItem }
     | { type: "REMOVE"; payload: BookItem }
@@ -55,7 +59,7 @@ function removeAllCopies(state: ShoppingCartItem[], book: BookItem): ShoppingCar
     let cartItemIndex = cartItems.findIndex(item => item.id === book.bookId);
 
     if (cartItemIndex > -1) {
-            cartItems.splice(cartItemIndex, 1);
+        cartItems.splice(cartItemIndex, 1);
     }
 
     return cartItems;
