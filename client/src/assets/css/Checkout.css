@@ -1,0 +1,10 @@
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.coming-soon {
+    font-size: 2rem;
+}

@@ -11,7 +11,6 @@ h2 {
 
 .category-cards {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 1em;
 }
@@ -36,5 +35,5 @@ h2 {
 
 .category-img {
     aspect-ratio: 0.75;
-    width: 12rem;
+    max-width: 11rem;
 }

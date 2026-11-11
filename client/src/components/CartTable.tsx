@@ -9,6 +9,7 @@ import type {ShoppingCartItem} from "../types.tsx";
 function CartTable() {
     const {cartItems, dispatch} = useContext(CartContext);
     const quantityButtonSize = "0.85em";
+    const trashButtonSize = "0.75em";
 
     return (
         <ul className="cart-table container">
@@ -42,7 +43,7 @@ function CartTable() {
                         </div>
                         <button onClick={() => dispatch({type: "REMOVE ALL COPIES", payload: item.book})}
                                 className="clear-book-button">
-                            <FaRegTrashCan size={quantityButtonSize}/>
+                            <FaRegTrashCan size={trashButtonSize}/>
                         </button>
                     </div>
 

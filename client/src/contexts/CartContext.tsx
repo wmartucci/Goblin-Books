@@ -1,6 +1,6 @@
 import {createContext, type Dispatch} from "react";
 import {type ShoppingCartItem} from "../types";
-import {type CartTypes, initialCart} from "../reducers/CartReducer.tsx";
+import {type CartTypes} from "../reducers/CartReducer.tsx";
 
 interface CartContextType {
     cartItems: ShoppingCartItem[];
@@ -8,7 +8,7 @@ interface CartContextType {
 }
 
 export const CartContext = createContext<CartContextType>({
-    cartItems: initialCart,
+    cartItems: [],
     dispatch: () => {
     },
 });

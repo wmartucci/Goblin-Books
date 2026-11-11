@@ -1,9 +1,5 @@
 import {ShoppingCartItem, type BookItem} from "../types.tsx";
 
-export const cartKey = "CartKey";
-const initialCartJSON: string | null = localStorage.getItem(cartKey);
-export const initialCart: ShoppingCartItem[] = initialCartJSON ? JSON.parse(initialCartJSON) : [];
-
 export type CartTypes =
     | { type: "ADD"; payload: BookItem }
     | { type: "REMOVE"; payload: BookItem }
